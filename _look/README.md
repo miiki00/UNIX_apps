@@ -1,20 +1,22 @@
 # _look
 
-Description - A program that looks if a file exists in the current working directory.
+## Description
+A program that looks if a file(s) exists in the current working directory.
 
 ## Installation
-You can use complier of your choic 'gcc'/'clang' both works fine.
-My prefered compiler is GCC.
+You can use complier of your choic `gcc`/`clang` both works fine.
 
-'''gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _look.c -o _look'''
-- NOTE: This is optional
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _look.c -o _look
+```
+NOTE: This is optional
 	if you feel like it is useful tool you can add it to one of
 	your path environmet
 ```
 sudo mv _look /usr/bin/
 ```
 ### Usage:
-Navigate to the path you want to look fils in.
+Navigate to the path (directory) you want to look files in.
 ```
 cd /PATH/
 ```
