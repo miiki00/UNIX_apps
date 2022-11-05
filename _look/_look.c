@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../main.h"
 
 /**
  * _strlen - countes the length of a string
@@ -8,20 +8,14 @@
  */
 int _strlen(char *s)
 {
-	int len;
+	int len = 0;
 
-	len = 0;
 	while (*(s + len) != '\0')
 		len++;
 	return (len);
 }
 /**
- * concat_strings - concatenates strings passed to it.
- * Descritpion: always str must be filled before jumping
- * to the next arguments else the fucntion will fail
- * if size is 0 and only str is passed then the address of
- * the passed string is returnd.
- * @size: The number of strings passed excluding str.
+ * concat_string - concatenates strings passed to it.
  * @str: The string to append the others to.
  *
  * Return: address of the concated string (success)
@@ -30,13 +24,17 @@ int _strlen(char *s)
 char *concat_string(char **str)
 {
 	ssize_t i, m, j, len = 0;
-	char *all;
+	char *all; /* the pointer to return after concatination */
+	/*
+	 * the returned address should be freed in case if someone uses
+	 * this function in there code
+	 */
 
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != NULL; i++)
-		len = len + _strlen(str[i]); /* calculates the sum of all strings in the array*/
-	all = malloc(sizeof(char) * len + 1); /* allcates memory for the concatenated string*/
+		len = len + _strlen(str[i]);
+	all = malloc(sizeof(char) * len + 1);
 	if (all == NULL)
 		return (NULL);
 	m = 0;
@@ -64,7 +62,7 @@ int main(int ac, char *av[])
 	int ret, i;
 	char *cwd = NULL, *str = NULL;
 	char *path[] = {NULL, "/", NULL};
-	
+
 	if (ac == 1)
 	{
 		fprintf(stderr, "Usage: %s <files> ...\n", av[0]);
@@ -85,10 +83,7 @@ int main(int ac, char *av[])
 			return (1);
 		ret = stat(str, &st);
 		if (ret == 0)
-		{
 			printf("%s : FOUND\n", av[i]);
-			sleep(2);
-		}
 		else
 			printf("%s : NOT FOUND\n", av[i]);
 		free(str);
