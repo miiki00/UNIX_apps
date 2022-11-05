@@ -10,7 +10,7 @@ to your own needs they are well documented so don't hesitate to read them.
 
 ## List Of subdirecotries and short description.
 #### _look:
- 	* search for files in the current directory
+* search for files in the current directory
 ### WILL BE RELEASED SOON
 
 Thankyou for visiting.
