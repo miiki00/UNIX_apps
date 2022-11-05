@@ -8,7 +8,6 @@ You can use complier of your choic `gcc`/`clang` both works fine.
 
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _look.c -o _look
-
 ```
 ### Usage:
 Navigate to the path (directory) you want to look files in.
