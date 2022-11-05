@@ -9,8 +9,8 @@ task the might be very specific in there use implementation so feel free to adju
 to your own needs they are well documented so don't hesitate to read them.
 
 ## List Of subdirecotries and short description.
-  * <h6>_look</h6>: search for files in the current directory
-	* Other features are going to be added to it in the near feature.
- WILL BE RELEASED SOON
+#### _look:
+ 	* search for files in the current directory
+### WILL BE RELEASED SOON
 
 Thankyou for visiting.
