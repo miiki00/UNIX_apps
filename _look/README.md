@@ -7,22 +7,27 @@ A program that looks if a file(s) exists in the current working directory.
 You can use complier of your choic `gcc`/`clang` both works fine.
 
 ```
-@user$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _look.c -o _look
-```
-### NOTE: <p> This is optional </p><br>
-	if you feel like it is useful tool you can add it to one of
-	your path environmet
-```
-sudo mv _look /usr/bin/
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _look.c -o _look
+
 ```
 ### Usage:
 Navigate to the path (directory) you want to look files in.
 ```
-@user$ cd /PATH/
+mv _look /to/the/path/you/need/to/look/files/for/
+./_look <file(s)>
 ```
-Then you can start using the tool.
+### Sample outputs.
 ```
-@user$ _look <file(s)>
+someone@user$ ls
+_look  _look.c  README.md  t  te  tes  test
+someone@user$ ./_look test tes te t e es est
+test : FOUND
+tes : FOUND
+te : FOUND
+t : FOUND
+e : NOT FOUND
+es : NOT FOUND
+est : NOT FOUND
 ```
 NOTE: This is not for production purpose just for training and developing skills
 you can adjust the tools in this repository per your own preference.
