@@ -10,18 +10,18 @@ My prefered compiler is GCC.
 - NOTE: This is optional
 	if you feel like it is useful tool you can add it to one of
 	your path environmet
-'''
+```
 sudo mv _look /usr/bin/
-'''
+```
 ### Usage:
 Navigate to the path you want to look fils in.
-'''
+```
 cd /PATH/
-'''
-- Then you can start using the tool.
-'''
+```
+Then you can start using the tool.
+```
 _look <file(s)>
-'''
+```
 NOTE: This is not for production just for training and developing skills
 
 Thankyou for visiting.
